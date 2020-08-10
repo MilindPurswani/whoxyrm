@@ -10,14 +10,14 @@ $ whoxyrm -company-name "Oath Inc."
 ## Installation
 
 ```
-go get -u github.com/milindpurswani/whoxyrm
+$ go get -u github.com/milindpurswani/whoxyrm
 ```
 
 Also, Make sure you export your whoxy api key as follows:
 *without this, it won't work.*
 
 ```
-export WHOXY_API_KEY="..."
+$ export WHOXY_API_KEY="..."
 ```
 *you can grab one from https://www.whoxy.com*
 
