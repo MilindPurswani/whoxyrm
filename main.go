@@ -68,7 +68,7 @@ func main() {
 	var cn string
 	flag.StringVar(&cn, "company-name", "", "Company Name for which you need to get all the assets from whoxy")
 	var rCount int
-	flag.IntVar(&rCount, "result-count", -1, "The count of results that you need to fetch from the API. Keep in mind that 1 request will give 50000 domains only. So, if you want to fetch 100,000 results, the tool will make 2 requests. Make sure you have sufficient credits available.")
+	flag.IntVar(&rCount, "result-count", -1, "The count of results that you need to fetch from the API. Keep in mind that 1 request will give 2500 domains only. So, if you want to fetch 10,000 results, the tool will make 4 requests. Make sure you have sufficient credits available.")
 	flag.Parse()
 	if flag.NArg() > 0 {
 		log.Fatal("Kindly check the docs whoxy -h for usage")
