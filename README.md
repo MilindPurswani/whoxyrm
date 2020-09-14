@@ -7,6 +7,23 @@ A reverse whois tool based on Whoxy API based on [@jhaddix](https://twitter.com/
 $ whoxyrm -company-name "Oath Inc."
 ```
 
+or 
+
+```
+$ whoxyrm -name "Oath Inc."
+```
+
+or 
+```
+$ whoxyrm -email "test@example.com"
+```
+
+or
+
+```
+$ whoxyrm -keyword "yahoo.com"
+```
+
 ## Installation
 
 ```
