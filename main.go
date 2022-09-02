@@ -18,7 +18,6 @@ type ResponseStruct struct {
 	Status           int              `json:"status"`
 	APIQuery         string           `json:"api_query"`
 	SearchIdentifier SearchIdentifier `json:"search_identifier"`
-	TotalResults     int              `json:"total_results"`
 	TotalPages       int              `json:"total_pages"`
 	CurrentPage      int              `json:"current_page"`
 	SearchResult     []SearchResult   `json:"search_result"`
