@@ -16,6 +16,7 @@ import (
 // ResponseStruct returns response_struct
 type ResponseStruct struct {
 	Status           int              `json:"status"`
+	StatusReason     string           `json:"status_reason,omitempty"`
 	APIQuery         string           `json:"api_query"`
 	SearchIdentifier SearchIdentifier `json:"search_identifier"`
 	TotalPages       int              `json:"total_pages"`
@@ -43,6 +44,7 @@ type SearchResult struct {
 // KeywordStruct results more than 50,000 domains
 type KeywordStruct struct {
 	Status            int               `json:"status"`
+	StatusReason      string            `json:"status_reason,omitempty"`
 	APIQuery          string            `json:"api_query"`
 	SearchIdentifier2 SearchIdentifier2 `json:"search_identifier"`
 	TotalResults      int               `json:"total_results"`
@@ -96,6 +98,13 @@ func getResult(page int, url string, mode string) int {
 		if err != nil {
 			log.Fatal(err)
 		}
+
+		// Check for the edge case
+		if respHandler.Status == 0 && respHandler.StatusReason == "Zero Account Balance" {
+			fmt.Println("Error: Zero Account Balance")
+			os.Exit(1)
+		}
+
 		for j := 0; j < len(respHandler.SearchResult); j++ {
 			fmt.Println(respHandler.SearchResult[j].DomainName)
 		}
@@ -107,6 +116,13 @@ func getResult(page int, url string, mode string) int {
 		if err != nil {
 			log.Fatal(err)
 		}
+
+		// Check for the edge case
+		if respHandler.Status == 0 && respHandler.StatusReason == "Zero Account Balance" {
+			fmt.Println("Error: Zero Account Balance")
+			os.Exit(1)
+		}
+
 		d := strings.Split(respHandler.DomainNames, ",")
 		for j := 0; j < len(d); j++ {
 			fmt.Println(d[j])
