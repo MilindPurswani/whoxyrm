@@ -1,0 +1,37 @@
+{
+  "name": "whoxyrm",
+  "version": "1.0.0",
+  "description": "NPM Package for whoxyrm",
+  "main": "main.go",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milindpurswani/whoxyrm.git"
+  },
+  "keywords": [
+    "whoxy",
+    "milindpurswani",
+    "whoxyrm",
+    "whois",
+    "who-is",
+    "reverse-who-is"
+  ],
+  "author": "MilindPurswani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milindpurswani/whoxyrm/issues"
+  },
+  "homepage": "https://github.com/milindpurswani/whoxyrm#readme",
+  "dependencies": {
+    "go-npm": "^0.1.9"
+  },
+  "postinstall": "go-npm install",
+  "preuninstall": "go-npm uninstall",
+  "goBinary": {
+    "name": "command-name",
+    "path": "./bin",
+    "url": "https://github.com/MilindPurswani/whoxyrm/releases/download/v{{version}}/whoxyrm_{{version}}_{{platform}}_{{arch}}.tar.gz"
+  }
+}
