@@ -27,7 +27,7 @@ $ whoxyrm -keyword "yahoo.com"
 ## Installation
 
 ```
-$ go get -u github.com/milindpurswani/whoxyrm
+$ go install github.com/milindpurswani/whoxyrm@latest
 ```
 
 Also, Make sure you export your whoxy api key as follows:
