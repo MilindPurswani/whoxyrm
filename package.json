@@ -1,6 +1,6 @@
 {
   "name": "whoxyrm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NPM Package for whoxyrm",
   "main": "main.go",
   "scripts": {
@@ -30,7 +30,7 @@
   "postinstall": "go-npm install",
   "preuninstall": "go-npm uninstall",
   "goBinary": {
-    "name": "command-name",
+    "name": "whoryrm",
     "path": "./bin",
     "url": "https://github.com/MilindPurswani/whoxyrm/releases/download/v{{version}}/whoxyrm_{{version}}_{{platform}}_{{arch}}.tar.gz"
   }
